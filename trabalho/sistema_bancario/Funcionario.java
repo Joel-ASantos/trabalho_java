@@ -1,8 +1,9 @@
 package trabalho.sistema_bancario;
 
 public class Funcionario extends Thread {
-    private Conta conta_funcionario;
+    Conta conta_funcionario;
     private Conta conta_investimento;
+    Banco banco;
     
     public Funcionario(Conta conta_funcionario,Conta conta_investimento){
         this.conta_funcionario = conta_funcionario;

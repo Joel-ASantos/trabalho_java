@@ -1,7 +1,8 @@
 package trabalho.sistema_bancario;
 
 public class Cliente extends Thread {
-    private Conta conta_cliente;
+    Conta conta_cliente;
+    Banco banco;
 
     public Cliente(Conta conta_cliente){
         this.conta_cliente = conta_cliente;
