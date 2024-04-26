@@ -5,6 +5,10 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Banco {
     private static Lock lock = new ReentrantLock(); // add lock
 
+    public static void conferindo_conta(Conta contaLojas, float valor){
+        // verificar se recebeu algo na conta *usar na loja
+    }
+
     public static void transferencia(Conta origem,Conta destino, float valor){
         if(lock.tryLock()){
             try{

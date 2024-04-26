@@ -1,7 +1,7 @@
 package trabalho.sistema_bancario;
 
 public class Cliente extends Thread {
-    Conta conta_cliente;
+    protected Conta conta_cliente;
     Banco banco;
 
     public Cliente(Conta conta_cliente){
