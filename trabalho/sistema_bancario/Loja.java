@@ -3,12 +3,10 @@ package trabalho.sistema_bancario;
 public class Loja {
     Conta conta_loja;
     Funcionario funcionarios;
-    Cliente cliente;
     Banco banco;
 
     public Loja(Conta conta_loja){
         this.conta_loja = conta_loja;
-        this.cliente = cliente;
     }
 
     public boolean verificar_conta_pagamento(Conta conta_loja){
