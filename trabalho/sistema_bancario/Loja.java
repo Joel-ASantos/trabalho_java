@@ -5,7 +5,7 @@ public class Loja {
     Funcionario funcionarios;
     Banco banco;
 
-    public Loja(Conta conta_loja){
+    public Loja(Conta conta_loja,Funcionario funcionarios,Funcionario funcionario,Banco banco){
         this.conta_loja = conta_loja;
         this.funcionarios = funcionarios;
         this.banco = banco;
