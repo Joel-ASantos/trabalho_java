@@ -14,6 +14,7 @@ public class Main {
         Conta contaFuncionario2 = new Conta(0.0);
         Conta contaFuncionario3 = new Conta(0.0);
         Conta contaFuncionario4 = new Conta(0.0);
+
         Conta contaFuncionarioInvestimento1 = new Conta(0.0);
         Conta contaFuncionarioInvestimento2 = new Conta(0.0);
         Conta contaFuncionarioInvestimento3 = new Conta(0.0);
@@ -27,8 +28,8 @@ public class Main {
         Funcionario funcionario3 = new Funcionario(contaFuncionario3, contaFuncionarioInvestimento3, banco);
         Funcionario funcionario4 = new Funcionario(contaFuncionario4, contaFuncionarioInvestimento4, banco);
 
-        Loja loja01 = new Loja(loja1, funcionario1, funcionario2, banco);
-        Loja loja02 = new Loja(loja2, funcionario3, funcionario4, banco);
+        Loja loja01 = new Loja(loja1, banco);
+        Loja loja02 = new Loja(loja2, banco);
 
         Cliente cliente1 = new Cliente(contaCliente1, loja01 ,loja02, banco);
         Cliente cliente2 = new Cliente(contaCliente2, loja01 ,loja02, banco);
@@ -52,6 +53,14 @@ public class Main {
             System.out.println(e);
         }
 
+        loja01.pagar_funcionario(funcionario1,funcionario2);
+        loja02.pagar_funcionario(funcionario3,funcionario4);
+
+        funcionario1.investimento();
+        funcionario2.investimento();
+        funcionario3.investimento();
+        funcionario4.investimento();
+        
         System.out.println("saldo da loja1: " + loja01.conta_loja.getSaldo());
         System.out.println("saldo da loja2: " + loja02.conta_loja.getSaldo());
         

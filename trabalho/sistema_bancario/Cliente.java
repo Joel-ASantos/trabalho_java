@@ -27,7 +27,7 @@ public class Cliente extends Thread {
 
             Loja loja_selecionada = alternar_lojas(null, loja1, loja2);
             if(loja_selecionada == loja1){
-                banco.transferencia(conta_cliente, loja1.conta_loja, valor); 
+                banco.transferencia(conta_cliente, loja1.conta_loja, valor);
             }else{
                 banco.transferencia(conta_cliente, loja2.conta_loja, valor); 
             }

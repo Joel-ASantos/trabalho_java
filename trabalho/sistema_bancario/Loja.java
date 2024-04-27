@@ -2,32 +2,26 @@ package trabalho.sistema_bancario;
 
 public class Loja {
     Conta conta_loja;
-    Funcionario primeiroFuncionarios;
-    Funcionario segundoFuncionarios;
+    Funcionario primeiroFuncionario;
+    Funcionario segundoFuncionario;
     Banco banco;
 
-    public Loja(Conta conta_loja,Funcionario primeiroFuncionarios,Funcionario segundoFuncionarios,Banco banco){
+    public Loja(Conta conta_loja,Banco banco){
         this.conta_loja = conta_loja;
-        this.primeiroFuncionarios = primeiroFuncionarios;
-        this.segundoFuncionarios = segundoFuncionarios;
         this.banco = banco;
     }
 
-    public boolean verificar_conta_pagamento(Conta conta_loja){
-        if(conta_loja.getSaldo() >= 1400.00){
-            return true;
-        }
-        return false;
+    public boolean verificar_conta_pagamento(double valor){
+        return (conta_loja.getSaldo() >= valor);
     }
 
-    public void pagar_funcionario(Funcionario primeiroFuncionarios,Funcionario segundoFuncionarios){
-        boolean saldo_conta = verificar_conta_pagamento(conta_loja);
-        if(saldo_conta){
-            double salario = 1400.00;
-            banco.transferencia(conta_loja, primeiroFuncionarios.conta_funcionario, salario);
-            banco.transferencia(conta_loja, segundoFuncionarios.conta_funcionario, salario);
-        }else{
-            System.out.println("saldo insuficiente para pagar funcionarios");
+    public void pagar_funcionario(Funcionario primeiroFuncionario,Funcionario segundoFuncionario) {
+        double salario = 1400.00;
+        if(verificar_conta_pagamento(salario * 2)){
+            banco.transferencia(conta_loja, primeiroFuncionario.conta_funcionario, salario);
+            banco.transferencia(conta_loja, segundoFuncionario.conta_funcionario, salario);
+        } else {
+            System.out.println("Saldo insuficiente para pagar funcionários.");
         }
     }
 }
