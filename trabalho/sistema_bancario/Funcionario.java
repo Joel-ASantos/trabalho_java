@@ -14,7 +14,7 @@ public class Funcionario extends Thread {
         this.banco = banco;
     }
 
-    public void investir(){
+    public void investimento(){
         if(conta_funcionario.getSaldo() >= 1400.00){
             valor_retirado = conta_funcionario.getSaldo() * 0.20;
             banco.transferencia(conta_funcionario, conta_investimento, valor_retirado);
