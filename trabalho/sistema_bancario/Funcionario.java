@@ -10,10 +10,11 @@ public class Funcionario extends Thread {
         this.conta_investimento = conta_investimento;
     }
 
-    public void run(){
-        /*
-         *receber salario
-         *fazer investimento de 20% 
-        */
+    public void receber_salario(){
+        
+    }
+
+    public void investimento(){
+        
     }
 }

@@ -11,6 +11,7 @@ public class Banco {
                 if(origem.saldo >= valor){
                     origem.saldo -= valor;
                     destino.saldo +=valor;
+                    System.out.println("Valor da tranferencia: R$ " + valor);
                 }else{
                     System.out.println("Saldo insuficiente!");
                 }
