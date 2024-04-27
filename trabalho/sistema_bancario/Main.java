@@ -7,15 +7,18 @@ public class Main {
 
         // criando contas
         Conta contaCliente = new Conta(1000.00);
-        Conta contaFuncionario = new Conta(0);
-        Conta contaFuncionarioInvestimento = new Conta(0);
+        Conta contaFuncionario1 = new Conta(0.0);
+        Conta contaFuncionario2 = new Conta(0.0);
+        Conta contaFuncionario3 = new Conta(0.0);
+        Conta contaFuncionario4 = new Conta(0.0);
+        Conta contaFuncionarioInvestimento = new Conta(0.0);
         Conta loja = new Conta(0);
 
         // criando funcionarios
-        Funcionario funcionario1 = new Funcionario(contaFuncionario, contaFuncionarioInvestimento, banco);
-        Funcionario funcionario2 = new Funcionario(contaFuncionario, contaFuncionarioInvestimento, banco);
-        Funcionario funcionario3 = new Funcionario(contaFuncionario, contaFuncionarioInvestimento, banco);
-        Funcionario funcionario4 = new Funcionario(contaFuncionario, contaFuncionarioInvestimento, banco);
+        Funcionario funcionario1 = new Funcionario(contaFuncionario1, contaFuncionarioInvestimento, banco);
+        Funcionario funcionario2 = new Funcionario(contaFuncionario2, contaFuncionarioInvestimento, banco);
+        Funcionario funcionario3 = new Funcionario(contaFuncionario3, contaFuncionarioInvestimento, banco);
+        Funcionario funcionario4 = new Funcionario(contaFuncionario4, contaFuncionarioInvestimento, banco);
 
         // criando lojas
         Loja loja1 = new Loja(loja, funcionario1,funcionario2, banco);
@@ -42,10 +45,10 @@ public class Main {
         System.out.println("saldo da loja2: " + loja2.conta_loja.getSaldo());
         
         // saldo dos funcionario
-        System.out.println("saldo do funcionario1: " + funcionario1.conta_funcionario.getSaldo() + "conta investimento: " + funcionario1.conta_investimento.getSaldo());
-        System.out.println("saldo do funcionario2: " + funcionario2.conta_funcionario.getSaldo() + "conta investimento: " + funcionario2.conta_investimento.getSaldo());
-        System.out.println("saldo do funcionario3: " + funcionario3.conta_funcionario.getSaldo() + "conta investimento: " + funcionario3.conta_investimento.getSaldo());
-        System.out.println("saldo do funcionario4: " + funcionario4.conta_funcionario.getSaldo() + "conta investimento: " + funcionario4.conta_investimento.getSaldo());
+        System.out.println("saldo do funcionario1: " + funcionario1.conta_funcionario.getSaldo() + " conta investimento: " + funcionario1.conta_investimento.getSaldo());
+        System.out.println("saldo do funcionario2: " + funcionario2.conta_funcionario.getSaldo() + " conta investimento: " + funcionario2.conta_investimento.getSaldo());
+        System.out.println("saldo do funcionario3: " + funcionario3.conta_funcionario.getSaldo() + " conta investimento: " + funcionario3.conta_investimento.getSaldo());
+        System.out.println("saldo do funcionario4: " + funcionario4.conta_funcionario.getSaldo() + " conta investimento: " + funcionario4.conta_investimento.getSaldo());
 
         // saldo dos clientes
         System.out.println("saldo do cliente1: " + cliente1.conta_cliente.getSaldo());

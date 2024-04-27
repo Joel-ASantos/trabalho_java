@@ -11,12 +11,11 @@ public class Funcionario extends Thread {
         this.conta_investimento = conta_investimento;
         this.conta_funcionario.setSaldo(0.0);
         this.conta_investimento.setSaldo(0.0);;
-        this.valor_retirado = valor_retirado;
         this.banco = banco;
     }
 
     public void run(){
-        if(conta_funcionario.getSaldo() == 1400.00){
+        if(conta_funcionario.getSaldo() >= 1400.00){
             valor_retirado = conta_funcionario.getSaldo() * 0.20;
             banco.transferencia(conta_funcionario, conta_investimento, valor_retirado);
         }
