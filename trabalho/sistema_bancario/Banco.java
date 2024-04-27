@@ -17,7 +17,6 @@ public class Banco {
             }
         } finally{
             lock.unlock();
-        }
-        System.out.println("Erro durante a operação");   
+        }   
     }
 }
