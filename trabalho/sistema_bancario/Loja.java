@@ -7,10 +7,12 @@ public class Loja {
 
     public Loja(Conta conta_loja){
         this.conta_loja = conta_loja;
+        this.funcionarios = funcionarios;
+        this.banco = banco;
     }
 
     public boolean verificar_conta_pagamento(Conta conta_loja){
-        if(conta_loja.saldo != 0 && conta_loja.saldo >= 1400){
+        if(conta_loja.saldo != 0 && conta_loja.saldo >= 1400.00){
             return true;
         }
         System.out.println("Não possui o valor suficiente para pagar o funcionario");
@@ -19,7 +21,7 @@ public class Loja {
 
     public void pagar_funcionario(Funcionario funcionarios){
         if(verificar_conta_pagamento(conta_loja)){
-            banco.transferencia(conta_loja, funcionarios.conta_funcionario, 1400);
+            banco.transferencia(conta_loja, funcionarios.conta_funcionario, 1400.00);
         }
     }
 }

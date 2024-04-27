@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Banco {
     private static Lock lock = new ReentrantLock(); // add lock
 
-    public static void transferencia(Conta origem,Conta destino, float valor){
+    public static void transferencia(Conta origem,Conta destino, double valor){
         if(lock.tryLock()){
             try{
                 if(origem.saldo >= valor){
