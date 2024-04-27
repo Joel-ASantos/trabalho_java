@@ -9,14 +9,15 @@ public class Funcionario extends Thread {
     public Funcionario(Conta conta_funcionario,Conta conta_investimento,double valor_retirado){
         this.conta_funcionario = conta_funcionario;
         this.conta_investimento = conta_investimento;
-        this.conta_funcionario.saldo = 0;
-        this.conta_investimento.saldo = 0;
+        this.conta_funcionario.setSaldo(0.0);
+        this.conta_investimento.setSaldo(0.0);;
         this.valor_retirado = valor_retirado;
+        this.banco = banco;
     }
 
     public void run(){
-        if(conta_funcionario.saldo == 1400.00){
-            valor_retirado = conta_funcionario.saldo * 0.20;
+        if(conta_funcionario.getSaldo() == 1400.00){
+            valor_retirado = conta_funcionario.getSaldo() * 0.20;
             banco.transferencia(conta_funcionario, conta_investimento, valor_retirado);
         }
     }

@@ -12,7 +12,7 @@ public class Loja {
     }
 
     public boolean verificar_conta_pagamento(Conta conta_loja){
-        if(conta_loja.saldo != 0.0 && conta_loja.saldo >= 1400.00){
+        if(conta_loja.getSaldo() != 0.0 && conta_loja.getSaldo() >= 1400.00){
             return true;
         }
         System.out.println("Não possui o valor suficiente para pagar o funcionario");

@@ -3,14 +3,14 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Banco {
-    private static Lock lock = new ReentrantLock(); // add lock
+    private static Lock lock = new ReentrantLock();
 
-    public static void transferencia(Conta origem,Conta destino, double valor){
+    public void transferencia(Conta origem,Conta destino, double valor){
         if(lock.tryLock()){
             try{
-                if(origem.saldo >= valor){
-                    origem.saldo -= valor;
-                    destino.saldo +=valor;
+                if(origem.getSaldo() >= valor){
+                    origem.setSaldo(origem.getSaldo() - valor);
+                    destino.setSaldo(destino.getSaldo() + valor);
                     System.out.println("Valor da tranferencia: R$ " + valor);
                 }else{
                     System.out.println("Saldo insuficiente!");
