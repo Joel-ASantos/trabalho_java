@@ -1,7 +1,7 @@
 package trabalho.sistema_bancario;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Banco banco = new Banco();
 
         Conta contaCliente1 = new Conta(1000.00);
