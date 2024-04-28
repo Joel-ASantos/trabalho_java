@@ -52,7 +52,7 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e);
         }
-
+        
         loja01.pagar_funcionario(funcionario1,funcionario2);
         loja02.pagar_funcionario(funcionario3,funcionario4);
 
@@ -66,10 +66,10 @@ public class Main {
         
         System.out.println("\n");
 
-        System.out.println("saldo do funcionario1: " + funcionario1.conta_funcionario.getSaldo() + " conta investimento: " + funcionario1.conta_investimento.getSaldo());
-        System.out.println("saldo do funcionario2: " + funcionario2.conta_funcionario.getSaldo() + " conta investimento: " + funcionario2.conta_investimento.getSaldo());
-        System.out.println("saldo do funcionario3: " + funcionario3.conta_funcionario.getSaldo() + " conta investimento: " + funcionario3.conta_investimento.getSaldo());
-        System.out.println("saldo do funcionario4: " + funcionario4.conta_funcionario.getSaldo() + " conta investimento: " + funcionario4.conta_investimento.getSaldo());
+        System.out.println("saldo do funcionario1: " + funcionario1.getConta_funcionario().getSaldo() + " conta investimento: " + funcionario1.getConta_investimento().getSaldo());
+        System.out.println("saldo do funcionario2: " + funcionario2.getConta_funcionario().getSaldo() + " conta investimento: " + funcionario2.getConta_investimento().getSaldo());
+        System.out.println("saldo do funcionario3: " + funcionario3.getConta_funcionario().getSaldo() + " conta investimento: " + funcionario3.getConta_investimento().getSaldo());
+        System.out.println("saldo do funcionario4: " + funcionario4.getConta_funcionario().getSaldo() + " conta investimento: " + funcionario4.getConta_investimento().getSaldo());
 
         System.out.println("\n");
 

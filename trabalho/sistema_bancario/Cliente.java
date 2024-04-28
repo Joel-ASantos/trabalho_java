@@ -1,6 +1,7 @@
 package trabalho.sistema_bancario;
 import java.util.Random;
 
+
 public class Cliente extends Thread {
     protected Conta conta_cliente;
     Loja loja1;
@@ -32,5 +33,5 @@ public class Cliente extends Thread {
                 banco.transferencia(conta_cliente, loja2.conta_loja, valor); 
             }
         }
-    }
+   }    
 }
